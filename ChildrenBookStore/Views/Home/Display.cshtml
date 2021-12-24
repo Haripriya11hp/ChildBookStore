@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ChildrenBookStore.Models.BookDetail>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Display</title>
+</head>
+<body>
+    <p>
+        <a asp-action="Index">Index</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.book_id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.book_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.category_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.book_authorname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.book_price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Image)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.category_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_authorname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Image)
+                    </td>
+                    <td>
+                        @using (Html.BeginForm("Cartinsert", "Home", new { Id = item.book_id }, FormMethod.Post))
+                        {
+                            <button>submit</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

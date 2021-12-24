@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="assets/img/favicon.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <link href="~/css/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/css/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/css/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/css/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="~/css/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="logo">
+                <h1><a asp-controller="Home" asp-action="Index">The Rabbit Children's Bookstore</a></h1>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="active" asp-controller="Home" asp-action="Index">Home</a></li>
+
+                    <li class="dropdown">
+                        <a href="#"><span>Books</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li class="dropdown">
+                                <a asp-controller="Home" asp-action="ActivityBooks"><span>Activity Books</span> <i class="bi bi-chevron-right"></i></a>
+
+                            </li>
+
+                            <li class="dropdown">
+                                <a asp-controller="Home" asp-action="StoryBooks"><span>Story Books</span> <i class="bi bi-chevron-right"></i></a>
+
+                            </li>
+
+                            <li class="dropdown">
+                                <a asp-controller="Home" asp-action="SubjectBooks"><span>Subject Books</span> <i class="bi bi-chevron-right"></i></a>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a asp-controller="Home" asp-action="Cart">Cart</a></li>
+
+                    <li><a asp-controller="Home" asp-action="LoginSignupPage">Logout</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+
+        </div>
+    </header>
+
+    <div>
+        <br />
+
+        @RenderBody()
+
+    </div>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class=""></i> <a href="#">Home</a></li>
+                            <li><i class=""></i> <a href="#">About us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Visit our store</h4>
+                        <p>
+                            The Rabbit Children's Bookstore<br>
+                            Near Hosur HP Layout<br>
+                            India<br><br>
+                            <strong>Phone:</strong> 9101812141<br>
+                            <strong>Email:</strong> info@rabbit.com<br>
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <h3>About The Rabbit</h3>
+                        <p>Lovely Collection of Books for Kids of all Age Groups</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>The Rabbit Children's Bookstore</span></strong>. All Rights Reserved
+            </div>
+
+        </div>
+        <button type="button"
+                class="btn btn-danger btn-floating btn-lg"
+                id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <style>
+            #btn-back-to-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                display: none;
+            }
+        </style>
+        <script>
+            //Get the button
+            let mybutton = document.getElementById("btn-back-to-top");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (
+                    document.body.scrollTop > 20 ||
+                    document.documentElement.scrollTop > 20
+                ) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            mybutton.addEventListener("click", backToTop);
+
+            function backToTop() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </footer>
+
+
+    <script src="~/js/purecounter.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/glightbox.min.js"></script>
+    <script src="~/js/isotope.pkgd.min.js"></script>
+    <script src="~/js/swiper-bundle.min.js"></script>
+    <script src="~/js/noframework.waypoints.js"></script>
+
+
+    <script src="~/js/main.js"></script>
+</body>
+</html>

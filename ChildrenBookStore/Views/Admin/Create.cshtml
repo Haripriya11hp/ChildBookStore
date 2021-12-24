@@ -1,0 +1,65 @@
+﻿@model ChildrenBookStore.Models.BookDetail
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+    <h4>BookDetails</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="book_name" class="control-label"></label>
+                    <input type="text" asp-for="book_name" class="form-control" />
+                    <span asp-validation-for="book_name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="category_name" class="control-label"></label>
+                    <input asp-for="category_name" class="form-control" />
+                    <span asp-validation-for="category_name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="book_authorname" class="control-label"></label>
+                    <input asp-for="book_authorname" class="form-control" />
+                    <span asp-validation-for="book_authorname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="book_price" class="control-label"></label>
+                    <input asp-for="book_price" class="form-control" />
+                    <span asp-validation-for="book_price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Image" class="control-label"></label>
+                    <input asp-for="Image" class="form-control" />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</body>
+</html>

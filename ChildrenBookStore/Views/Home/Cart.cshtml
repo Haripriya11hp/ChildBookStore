@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ChildrenBookStore.Models.BookDetail>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cart</title>
+</head>
+<body>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.book_id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.book_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.category_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.book_authorname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.book_price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Image)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.category_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_authorname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Image)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+

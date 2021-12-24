@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Children's Bookstore' - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="assets/img/favicon.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <link href="~/css/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/css/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/css/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/css/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="~/css/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <section id="hero">
+        <div class="hero-container">
+            <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="carousel-item active">
+                        <img style=" width:100%" src="~/images/realistic-smartphone-set_198530-378.jpg" />
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Children Store</span></h2>
+                                <p class="animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione facilis odit,</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <main id="main">
+        <section id="featured" class="featured">
+            <div class="container">
+                <h2>Choose your preferred one...</h2>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a asp-controller="Home" asp-action="activitybooks">
+                            <div class="icon-box">
+                                <i class="fa fa-activitybooks"></i><br />
+                                <h3>Activity Books</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0">
+                        <a asp-controller="Home" asp-action="subjectbooks">
+                            <div class="icon-box">
+                                <i class="fa fa-subjectbooks"></i><br />
+                                <h3>Subject Books</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0">
+                        <a asp-controller="Home" asp-action="storybooks">
+                            <div class="icon-box">
+                                <i class="fa fa-storybooks"></i><br />
+                                <h3>Story Books</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="~/js/purecounter.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/glightbox.min.js"></script>
+    <script src="~/js/isotope.pkgd.min.js"></script>
+    <script src="~/js/swiper-bundle.min.js"></script>
+    <script src="~/js/noframework.waypoints.js"></script>
+
+
+    <script src="~/js/main.js"></script>
+
+</body>
+
+</html>

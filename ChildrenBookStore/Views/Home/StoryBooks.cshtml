@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "ActivityBooks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/style.css">
+    <!-- Bootstrap CSS -->
+
+
+    <title>Activity Books</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="mySidenav" class="sidenav">
+            <button class="closebtn" onclick="closeNav()">&times;</button>
+            <button onclick="DotToDotBook()">DotToDot Book</button>
+            <button onclick="DrawingBook()">Drawing Book</button>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Author Name</span>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            function DotToDotBook() {
+                document.getElementById("desc").innerHTML = "<h1 style='text-align:center'>DotToDot Book</h1><div class='row'><div class='column'><div class='card'><img src='https://www.google.com/imgres?imgurl=https%3A%2F%2Frukminim1.flixcart.com%2Fimage%2F416%2F416%2Fkjlrb0w0-0%2Fbook%2Fh%2Fn%2Fj%2Falphabet-dot-to-dot-book-for-kids-original-imafz56jbhathqtp.jpeg%3Fq%3D70&imgrefurl=https%3A%2F%2Fwww.flipkart.com%2Falphabet-dot-to-dot-book-kids%2Fp%2Fitmf8mk8yhxbrtzm&tbnid=2CCmTbsY3uUakM&vet=12ahUKEwjJrPOi8vv0AhUbz6ACHX_7AiUQMygSegUIARCLAg..i&docid=DJFGoO10ZLrC_M&w=321&h=416&itg=1&q=dottodot%20book&ved=2ahUKEwjJrPOi8vv0AhUbz6ACHX_7AiUQMygSegUIARCLAg'alt='Coloring Book' style='width:80%'><p class='price'>₹530</p><h3>Description</h3><p>This children's coloring book is full of happy,smiling,beautiful drawings. Please note this is not an adult coloring book and the styleis that of orinary child's coloring book with a matte cover to finish.</p><p><a href='/Home/Display'><button >View</button></a></p></div></div>"
+            }
+            function DrawingBook() {
+                document.getElementById("desc").innerHTML = "<h1 style='text-align:center'>Drawing Book</h1><div class='row'><div class='column'><div class='card'><img src='https://vidyaprakashan.com/wp-content/uploads/2020/02/My-Art-Cafe-c-copy-min.jpg'alt='Quiz Book' style='width:98.4%'><h1>Quiz Book</h1><p class='price'>₹970</p><h3>Description</h3><p>This book nurtures the creativity and imagination of a child by feeding him answers to questions that are valuable and unique.</p><p><a href='/Home/QuizBook'><button>View</button></a></p></div></div>"
+            }
+        </script>
+        <div id="desc">
+            <div style="display: flex; justify-content: center;">
+                <img alt="Welcome to Activity Books" src="https://i.pinimg.com/736x/63/4b/d2/634bd27fc20dc31e3fff8bb94d61473d.jpg"
+                     style="width: 50%;">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
